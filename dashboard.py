@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+from database import init_db
 from tools import (
     add_job_application,
     list_applications,
@@ -7,7 +8,7 @@ from tools import (
     delete_application,
     summarize_applications
 )
-
+init_db()
 st.title("AI Job Application Tracker")
 
 st.header("Add New Job Application")
